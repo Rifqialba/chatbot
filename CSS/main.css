@@ -1,0 +1,152 @@
+/* main.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Work Sans', sans-serif;
+    min-height: 100vh;
+    padding-top: 3%;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 11ch; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; }
+}
+
+#title {
+    font-size: 6.5rem;
+    color: #062e3f;
+    position: relative;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    animation: typing 2s steps(11, end), blink-caret .75s step-end infinite;
+}
+
+#header {
+    margin: 0 1rem;
+    min-height: 10vh;
+    width: 100%;
+}
+
+#form {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    font-size: 1.7rem;
+    justify-content: center;
+    margin: 15px 0;
+    padding: 0.8rem;
+    width: 100%;
+}
+
+form input {
+    padding: 10px;
+    font-size: 17px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    max-width: 500px;
+    transition: background-color 200ms ease-in-out;
+    width: 100%;
+}
+
+form button {
+    padding: 10px;
+    font-size: 17px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    min-width: 100px;
+}
+
+.todo-input::placeholder {
+    color: black;
+    opacity: 30%;
+}
+/* Chatbot message styles */
+.message {
+    margin: 10px 0;
+    padding: 10px;
+    max-width: 70%;
+    border-radius: 10px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #f3f3f3;
+    color: black;
+}
+
+.error-message {
+    align-self: center;
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 800px) {
+    .message {
+        max-width: 90%;
+    }
+    #title {
+        font-size: 2rem;
+    }
+     .todo-btn {
+        padding: 10px 10px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #ffffff;
+        color: white;
+        border-radius: 0 5px 5px 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #title {
+        font-size: 2rem;
+    }
+
+    .chat-input {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    .todo-input {
+        margin-bottom: 1px;
+       
+    }
+    
+    .todo-btn {
+        padding: 10px 10px;
+        font-size: 16px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background-color: #ffffff;
+        color: white;
+        border-radius: 0 5px 5px 0;
+    }
+}
