@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function sendChatMessage(message) {
-        const url = 'https://"your_server"/v1/chat';
+        const url = 'https://albalogic.vercel.app/v1/chat';
         fetch(url, {
             method: 'POST',
             headers: {
